@@ -59,7 +59,7 @@ git push
 │
 ├──► 🐳 Integration Tests (PostgreSQL)
 │
-└──► ✅ All Checks Passed
+|──► ✅ All Checks Passed
 │
 📦 Build Binary
 
@@ -127,8 +127,8 @@ git push
 - Go 1.21 or higher
 - Docker (for integration tests)
 
----
+## 🐍 Snake Animation
 
-![Snake](https://raw.githubusercontent.com/Badnation-137/go-qa-framework/main/dist/github-contribution-grid-snake.svg)
+![Snake Animation](https://raw.githubusercontent.com/Badnation-137/go-qa-framework/main/dist/github-contribution-grid-snake.gif)
 
----
+*Snake eats my GitHub contributions!*
