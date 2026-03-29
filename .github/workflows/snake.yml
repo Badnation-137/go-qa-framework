@@ -20,6 +20,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          # Use PAT instead of GITHUB_TOKEN
+          token: ${{ secrets.PAT_TOKEN }}
       
       - name: Generate snake animation
         uses: Platane/snk@v3
@@ -35,4 +38,7 @@ jobs:
         with:
           message: "🐍 Update snake animation"
           add: "dist/*"
-          commit: --signoff
+          author_name: github-actions[bot]
+          author_email: github-actions[bot]@users.noreply.github.com
+          # Use PAT for pushing
+          token: ${{ secrets.PAT_TOKEN }}
