@@ -1,0 +1,56 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Test Function",
+            "type": "go",
+            "request": "launch",
+            "mode": "test",
+            "program": "${fileDirname}",
+            "args": [
+                "-test.run",
+                "^${input:TestFunction}$"
+            ],
+            "showLog": true
+        },
+        {
+            "name": "Launch Package Tests",
+            "type": "go",
+            "request": "launch",
+            "mode": "test",
+            "program": "${workspaceFolder}/internal/calculator",
+            "showLog": true
+        },
+        {
+            "name": "Launch All Tests with Coverage",
+            "type": "go",
+            "request": "launch",
+            "mode": "test",
+            "program": "${workspaceFolder}/...",
+            "args": [
+                "-coverprofile=coverage.out"
+            ],
+            "showLog": true
+        },
+        {
+            "name": "Debug Current Test",
+            "type": "go",
+            "request": "launch",
+            "mode": "test",
+            "program": "${fileDirname}",
+            "args": [
+                "-test.run",
+                "^${relativeFile}$"
+            ],
+            "showLog": true
+        }
+    ],
+    "inputs": [
+        {
+            "id": "TestFunction",
+            "type": "promptString",
+            "description": "Enter test function name (e.g., TestAdd)",
+            "default": "Test"
+        }
+    ]
+}

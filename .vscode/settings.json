@@ -1,0 +1,33 @@
+{
+    "go.useLanguageServer": true,
+    "go.formatTool": "goimports",
+    "go.lintTool": "golangci-lint",
+    "go.lintFlags": [
+        "--fast"
+    ],
+    "go.testFlags": [
+        "-v",
+        "-race"
+    ],
+    "go.testTimeout": "10m",
+    "go.coverOnSingleTest": true,
+    "go.coverOnSingleTestFile": true,
+    // Auto-save & formatting
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    },
+    "files.autoSave": "onFocusChange",
+    // Terminal default WSL
+    "terminal.integrated.defaultProfile.linux": "bash",
+    // Go specific
+    "[go]": {
+        "editor.defaultFormatter": "golang.go",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    // Test explorer
+    "go.testExplorer.enable": true,
+    "go.testExplorer.alwaysShow": true
+}
