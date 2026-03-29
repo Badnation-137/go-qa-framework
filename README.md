@@ -129,6 +129,6 @@ git push
 
 ## 🐍 Snake Animation
 
-![Snake Animation](https://raw.githubusercontent.com/Badnation-137/go-qa-framework/main/dist/github-contribution-grid-snake.gif)
+![Snake Animation](https://raw.githubusercontent.com/Badnation-137/go-qa-framework/main/dist/github-contribution-grid-snake.svg)
 
-*Snake eats my GitHub contributions!*
+---
