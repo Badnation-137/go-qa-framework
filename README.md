@@ -130,20 +130,14 @@ git push
 - Docker (for integration tests)
 
 ---
+🙏 Thanks for checking out Go QA Framework!
+Built with Brain using Go & Testcontainers
 
-╔════════════════════════════════════════════════════════════╗
-║                                                            ║
-║   🐍  Thanks for checking out Go QA Framework!  🐍        ║
-║                                                            ║
-║        Built with ❤️  using Go & Testcontainers           ║
-║                                                            ║
-║   [⭐ Star]  [🔔 Watch]  [🍴 Fork]  [💡 Issues]          ║
-║                                                            ║
-╚════════════════════════════════════════════════════════════╝
-
+⭐ Star	🔔 Watch	🍴 Fork	💡 Issues
 <div align="center">
 https://img.shields.io/github/stars/Badnation-137/go-qa-framework?style=social
 https://img.shields.io/github/watchers/Badnation-137/go-qa-framework?style=social
 https://img.shields.io/github/forks/Badnation-137/go-qa-framework?style=social
+https://img.shields.io/github/issues/Badnation-137/go-qa-framework?style=social
 
-</div> ```
+</div>
