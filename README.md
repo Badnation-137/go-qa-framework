@@ -51,7 +51,6 @@ Automated testing with **GitHub Actions**:
 ### Pipeline Flow
 git push
 │
-▼
 🚀 GitHub Actions Trigger
 │
 ├──► 🔍 Lint & Security
@@ -62,7 +61,6 @@ git push
 │
 └──► ✅ All Checks Passed
 │
-▼
 📦 Build Binary
 
 ---
@@ -130,14 +128,18 @@ git push
 - Docker (for integration tests)
 
 ---
-🙏 Thanks for checking out Go QA Framework!
-Built with Brain using Go & Testcontainers
 
-⭐ Star	🔔 Watch	🍴 Fork	💡 Issues
-<div align="center">
-https://img.shields.io/github/stars/Badnation-137/go-qa-framework?style=social
-https://img.shields.io/github/watchers/Badnation-137/go-qa-framework?style=social
-https://img.shields.io/github/forks/Badnation-137/go-qa-framework?style=social
-https://img.shields.io/github/issues/Badnation-137/go-qa-framework?style=social
+![Snake Animation Light Mode](https://raw.githubusercontent.com/Badnation-137/go-qa-framework/output/snake.svg)
+![Snake Animation Dark Mode](https://raw.githubusercontent.com/Badnation-137/go-qa-framework/output/snake-dark.svg?raw=true)
 
-</div>
+---
+
+┌─────────────────────────────────────────────────────────────┐
+│                                                             │
+│   🐍  Thanks for checking out Go QA Framework!  🐍         │
+│                                                             │
+│        Built with ❤️  using Go & Testcontainers            │
+│                                                             │
+│   [⭐ Star]  [🔔 Watch]  [🍴 Fork]  [💡 Issues]           │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
