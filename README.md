@@ -140,3 +140,10 @@ git push
 ║   [⭐ Star]  [🔔 Watch]  [🍴 Fork]  [💡 Issues]          ║
 ║                                                            ║
 ╚════════════════════════════════════════════════════════════╝
+
+<div align="center">
+https://img.shields.io/github/stars/Badnation-137/go-qa-framework?style=social
+https://img.shields.io/github/watchers/Badnation-137/go-qa-framework?style=social
+https://img.shields.io/github/forks/Badnation-137/go-qa-framework?style=social
+
+</div> ```
