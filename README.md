@@ -129,17 +129,6 @@ git push
 
 ---
 
-![Snake Animation Light Mode](https://raw.githubusercontent.com/Badnation-137/go-qa-framework/output/snake.svg)
-![Snake Animation Dark Mode](https://raw.githubusercontent.com/Badnation-137/go-qa-framework/output/snake-dark.svg?raw=true)
+![Snake](https://raw.githubusercontent.com/Badnation-137/go-qa-framework/main/dist/github-contribution-grid-snake.svg)
 
 ---
-
-┌─────────────────────────────────────────────────────────────┐
-│                                                             │
-│   🐍  Thanks for checking out Go QA Framework!  🐍         │
-│                                                             │
-│        Built with ❤️  using Go & Testcontainers            │
-│                                                             │
-│   [⭐ Star]  [🔔 Watch]  [🍴 Fork]  [💡 Issues]           │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
