@@ -1,15 +1,12 @@
 # 🚀 Go QA Framework
 
-
 [![CI/CD](https://github.com/Badnation-137/go-qa-framework/actions/workflows/ci.yml/badge.svg)](https://github.com/Badnation-137/go-qa-framework/actions/workflows/ci.yml)
 [![Go Version](https://img.shields.io/badge/Go-1.26.1-00ADD8?style=flat&logo=go&logoColor=white)](https://go.dev/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Made with ❤️](https://img.shields.io/badge/Made%20with-❤️-red.svg)]()
 
-> 🚀 **Professional QA Framework built with Go**  
+> **Professional QA Framework built with Go**  
 > *Demonstrating Senior SDET capabilities with automated testing, containers & CI/CD*
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ---
 
@@ -17,61 +14,28 @@
 
 This project demonstrates **enterprise-level quality assurance** including unit testing, integration testing with PostgreSQL, and automated CI/CD pipelines.
 
-### What This Demonstrates:
-- 🧪 Unit Testing with testify
-- 🐳 Integration Testing with Testcontainers + PostgreSQL  
-- 🔄 CI/CD Pipeline with GitHub Actions
-- 🔒 Security Scanning with gosec
-- 📊 Multi-Go Version Testing (1.21, 1.22, 1.23)
+### What This Demonstrates
 
-┌─────────────────────────────────────────┐
-│ 🎯 What This Project Demonstrates: │
-├─────────────────────────────────────────┤
-│ 🧪 Unit Testing │ testify │
-│ 🐳 Integration Test │ Testcontainers │
-│ 🔄 CI/CD Pipeline │ GitHub Actions │
-│ 🔒 Security Scan │ gosec │
-│ 📊 Code Quality │ golangci-lint │
-│ 🔢 Multi-Version │ Go 1.21-1.23 │
-└─────────────────────────────────────────┘
+| Capability | Technology |
+|------------|------------|
+| 🧪 Unit Testing | testify |
+| 🐳 Integration Testing | Testcontainers + PostgreSQL |
+| 🔄 CI/CD Pipeline | GitHub Actions |
+| 🔒 Security Scanning | gosec |
+| 📊 Multi-Go Version Testing | Go 1.21, 1.22, 1.23 |
+| 📝 Code Linting | golangci-lint |
 
 ### ✨ Key Features
-✅ Table-driven unit tests with assertions
-✅ PostgreSQL integration via Docker containers
-✅ Auto spin-up/teardown of test databases
-✅ Multi-Go version compatibility testing
-✅ Automated security vulnerability scanning
-✅ Code linting with industry standards
-✅ One-command test execution
+
+- ✅ Table-driven unit tests with assertions
+- ✅ PostgreSQL integration via Docker containers
+- ✅ Auto spin-up/teardown of test databases
+- ✅ Multi-Go version compatibility testing
+- ✅ Automated security vulnerability scanning
+- ✅ Code linting with industry standards
+- ✅ One-command test execution
 
 ---
-
-### **Part 3: CI/CD Section**
-```markdown
----
-                ┌─────────────────┐
-                │   git push      │
-                └────────┬────────┘
-                         ▼
-        ┌─────────────────────────────┐
-        │  🚀 GitHub Actions Trigger  │
-        └─────────────────────────────┘
-                         │
-    ┌────────────────────┼────────────────────┐
-    ▼                    ▼                    ▼
-    ┌───────────────┐ ┌───────────────┐ ┌───────────────┐
-│ 🔍 Lint & │ │ 🧪 Unit Tests │ │ 🐳 Integration│
-│ Security │ │ Go 1.21/22/23 │ │ PostgreSQL │
-└───────┬───────┘ └───────┬───────┘ └───────┬───────┘
-│ │ │
-▼ ▼ ▼
-┌─────────────────────────────────────────────┐
-│ ✅ All Checks Passed │
-│ ▼ │
-│ ┌─────────────────┐ │
-│ │ 📦 Build Binary │ │
-│ └─────────────────┘ │
-└─────────────────────────────────────────────┘
 
 ## 🔄 CI/CD Pipeline
 
@@ -80,98 +44,92 @@ Automated testing with **GitHub Actions**:
 | Job | Description |
 |-----|-------------|
 | **Lint & Security** | Code quality & vulnerability scan |
-| **Unit Tests** | Multi-version Go testing |
+| **Unit Tests** | Multi-version Go testing (1.21, 1.22, 1.23) |
 | **Integration Tests** | PostgreSQL container testing |
 | **Build Binary** | Production compilation |
 
-
-### Pipeline Status
-
-[![CI/CD Pipeline](https://github.com/Badnation-137/go-qa-framework/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Badnation-137/go-qa-framework/actions)
+### Pipeline Flow
+git push
+│
+▼
+🚀 GitHub Actions Trigger
+│
+├──► 🔍 Lint & Security
+│
+├──► 🧪 Unit Tests (Go 1.21, 1.22, 1.23)
+│
+├──► 🐳 Integration Tests (PostgreSQL)
+│
+└──► ✅ All Checks Passed
+│
+▼
+📦 Build Binary
 
 ---
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
 ## 🐳 Integration Testing
 
-> Using **Testcontainers for Go** to spin up real PostgreSQL containers 🐘
+> Using **Testcontainers for Go** to spin up real PostgreSQL containers
 
 ### How It Works
-┌─────────────────────────────────────┐
-│ 1. 🐳 Start PostgreSQL container │
-│ 2. 🗄️ Create schema & tables │
-│ 3. 🧪 Run test cases │
-│ 4. 🧹 Auto-terminate container │
-└─────────────────────────────────────┘
 
-### ✅ Test Cases (All Passing)
-┌────────────────────────────────┬────────────────┐
-│ Test Case │ Description │
-├────────────────────────────────┼────────────────┤
-│ TestCreateUser │ INSERT + verify│
-│ TestGetUserByEmail │ SELECT query │
-│ TestUpdateUser │ UPDATE + check │
-│ TestDeleteUser │ DELETE + verify│
-│ TestDuplicateEmailConstraint │ UNIQUE enforce │
-│ TestBulkInsertPerformance │ 100 inserts │
-│ TestFindUsersByAgeRange │ WHERE clause │
-└────────────────────────────────┴────────────────┘
+1. 🐳 Start PostgreSQL container
+2. 🗄️ Create schema & tables
+3. 🧪 Run test cases
+4. 🧹 Auto-terminate container
 
-### Test Cases (All Passing ✅):
-- TestCreateUser
-- TestGetUserByEmail
-- TestUpdateUser
-- TestDeleteUser
-- TestDuplicateEmailConstraint
-- TestBulkInsertPerformance
-- TestFindUsersByAgeRange
+### Test Cases (All Passing ✅)
 
-### 📊 Performance Benchmark
-┌─────────────────┬─────────────┬────────────────────┐
-│ Run Type │ Time │ Notes │
-├─────────────────┼─────────────┼────────────────────┤
-│ First Run │ ~272s │ Download image │
-│ Cached Run │ ~15s ⚡ │ Image already local│
-│ CI/CD Runner │ ~59s │ Fresh environment │
-└─────────────────┴─────────────┴────────────────────┘
+| Test Case | Description |
+|-----------|-------------|
+| `TestCreateUser` | INSERT + verify |
+| `TestGetUserByEmail` | SELECT query |
+| `TestUpdateUser` | UPDATE + check |
+| `TestDeleteUser` | DELETE + verify |
+| `TestDuplicateEmailConstraint` | UNIQUE constraint enforcement |
+| `TestBulkInsertPerformance` | 100 inserts performance test |
+| `TestFindUsersByAgeRange` | WHERE clause filtering |
 
-### Benefits:
+### Performance Benchmark
+
+| Run Type | Time | Notes |
+|----------|------|-------|
+| First Run | ~272s | Downloading Docker image |
+| Cached Run | ~15s ⚡ | Image already local |
+| CI/CD Runner | ~59s | Fresh environment |
+
+### Benefits
+
 - 🔄 Isolated test environments
-- 🧹 Auto-cleanup after tests  
+- 🧹 Auto-cleanup after tests
 - 🚀 Fast with caching (~15s after first run)
 - 🎯 Real database, not mocks
 
 ---
 
 ## 🛠️ Tech Stack
-┌────────────────┬────────────────────────┐
-│ Category │ Technology │
-├────────────────┼────────────────────────┤
-│ Language │ Go 1.26.1 🐹 │
-│ Testing │ testify, testing pkg │
-│ Containers │ Docker + Testcontainers│
-│ Database │ PostgreSQL 15 Alpine │
-│ CI/CD │ GitHub Actions │
-│ Linting │ golangci-lint │
-│ Security │ gosec │
-│ Environment │ WSL2 (Ubuntu) on Win │
-└────────────────┴────────────────────────┘
 
-- **Language:** Go 1.26.1
-- **Testing:** testify, Go testing package
-- **Database:** PostgreSQL 15 (Testcontainers)
-- **CI/CD:** GitHub Actions
-- **Tools:** golangci-lint, gosec
+| Category | Technology |
+|----------|------------|
+| Language | Go 1.26.1 |
+| Testing | testify, testing package |
+| Containers | Docker + Testcontainers |
+| Database | PostgreSQL 15 Alpine |
+| CI/CD | GitHub Actions |
+| Linting | golangci-lint |
+| Security | gosec |
+| Environment | WSL2 (Ubuntu) on Windows |
 
 ---
 
 ## 🚀 Quick Start
 
-git clone https://github.com/Badnation-137/go-qa-framework.git
-cd go-qa-framework
-go mod download
-go test -v ./... -timeout=10m
+### Prerequisites
+
+- Go 1.21 or higher
+- Docker (for integration tests)
+
+---
 
 ╔════════════════════════════════════════════════════════════╗
 ║                                                            ║
@@ -182,11 +140,3 @@ go test -v ./... -timeout=10m
 ║   [⭐ Star]  [🔔 Watch]  [🍴 Fork]  [💡 Issues]          ║
 ║                                                            ║
 ╚════════════════════════════════════════════════════════════╝
-
-<div align="center">
-
-🔗 View CI/CD Pipeline
-📁 Explore Code
-Made with 🐍 by Badnation-137
-</div>
-```
