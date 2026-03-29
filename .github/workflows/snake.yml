@@ -1,0 +1,39 @@
+name: Generate Snake Animation
+
+on:
+  # Update snake setiap 12 jam
+  schedule:
+    - cron: "0 */12 * * *"
+  
+  # Manual trigger
+  workflow_dispatch:
+  
+  # Update setiap push ke main
+  push:
+    branches:
+      - main
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Generate snake animation
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+            dist/github-contribution-grid-snake.gif?color_snake=orange&color_dots=#bfdadc,#79b8ff,#9be9a8,#b8e986,#e9f99b,#ffdfb8,#ffb8b8
+      
+      - name: Commit and push
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "🐍 Update snake animation"
+          add: "dist/*"
+          commit: --signoff
+EOF
