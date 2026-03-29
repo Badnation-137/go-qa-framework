@@ -11,7 +11,7 @@ env:
 
 jobs:
   # ============================================
-  # JOB 1: Lint & Security
+  # JOB 1: Lint & Security (UPDATED)
   # ============================================
   lint-security:
     name: Lint & Security Scan
@@ -22,19 +22,25 @@ jobs:
     - name: Setup Go
       uses: actions/setup-go@v5
       with:
-        go-version: ${{ env.GO_VERSION }}
+        go-version: '1.26'  # ✅ Sesuaikan dengan project Anda
         cache: true
     
-    - name: Install linting tools
-      run: |
-        go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
-        go install github.com/securego/gosec/v2/cmd/gosec@latest
+    - name: Install golangci-lint (via go install - versi terbaru)
+      run: go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+    
+    - name: Install gosec
+      run: go install github.com/securego/gosec/v2/cmd/gosec@latest
     
     - name: Run golangci-lint
-      run: golangci-lint run --timeout=5m
+      run: |
+        # Pastikan PATH termasuk GOPATH/bin untuk akses binary yang di-install via go
+        export PATH=$PATH:$(go env GOPATH)/bin
+        golangci-lint run --timeout=5m --go=1.26
     
     - name: Run security scan
-      run: gosec ./...
+      run: |
+        export PATH=$PATH:$(go env GOPATH)/bin
+        gosec ./...
 
   # ============================================
   # JOB 2: Unit Tests (Multi Go Version)
