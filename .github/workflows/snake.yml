@@ -1,11 +1,11 @@
 name: Generate Snake Animation
 
 on:
-  # Update snake setiap 12 jam
+  # Update setiap 12 jam
   schedule:
     - cron: "0 */12 * * *"
   
-  # Manual trigger
+  # Bisa manual trigger
   workflow_dispatch:
   
   # Update setiap push ke main
@@ -36,4 +36,3 @@ jobs:
           message: "🐍 Update snake animation"
           add: "dist/*"
           commit: --signoff
-EOF
